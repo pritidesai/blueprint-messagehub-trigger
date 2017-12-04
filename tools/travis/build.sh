@@ -52,5 +52,5 @@ export OPENWHISK_HOME=$WHISKDIR
  source $DEPLOYDIR/packages/installCatalog.sh $AUTH_KEY $EDGE_HOST $WSK_CLI
 
 # Test
-cd $ROOTDIR/blueprint-hello-world
+cd $ROOTDIR/blueprint-messagehub-trigger
 ./gradlew :tests:test
