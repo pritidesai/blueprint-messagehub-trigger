@@ -72,7 +72,9 @@ class MessageHubTests extends TestHelpers
     }
 
     withActivation(wsk.activation, wsk.action.invoke(name)) {
-      _.response.result.get.toString should include("Invalid arguments. Must include 'messages' JSON array with 'value' field")
+      activation =>
+        activation.response.success shouldBe false
+        activation.response.result.get.toString should include("Invalid arguments. Must include 'messages' JSON array with 'value' field")
     }
   }
 
@@ -101,7 +103,9 @@ class MessageHubTests extends TestHelpers
     }
 
     withActivation(wsk.activation, wsk.action.invoke(name)) {
-      _.response.result.get.toString should include("Invalid arguments. Must include 'messages' JSON array with 'value' field")
+      activation =>
+        activation.response.success shouldBe false
+        activation.response.result.get.toString should include("Invalid arguments. Must include 'messages' JSON array with 'value' field")
     }
   }
 
@@ -130,7 +134,9 @@ class MessageHubTests extends TestHelpers
     }
 
     withActivation(wsk.activation, wsk.action.invoke(name)) {
-      _.response.result.get.toString should include("Invalid arguments. Must include 'messages' JSON array with 'value' field")
+      activation =>
+        activation.response.success shouldBe false
+        activation.response.result.get.toString should include("Invalid arguments. Must include 'messages' JSON array with 'value' field")
     }
   }
 
@@ -159,7 +165,9 @@ class MessageHubTests extends TestHelpers
     }
 
     withActivation(wsk.activation, wsk.action.invoke(name)) {
-      _.response.result.get.toString should include("Invalid arguments. Must include 'messages' JSON array with 'value' field")
+      activation =>
+        activation.response.success shouldBe false
+        activation.response.result.get.toString should include("Invalid arguments. Must include 'messages' JSON array with 'value' field")
     }
   }
 }
